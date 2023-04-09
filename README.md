@@ -1,1 +1,1 @@
-# major_project_in_nem
+# Major_Project_In_NEM
