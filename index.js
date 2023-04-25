@@ -9,6 +9,8 @@ const expressLayout = require('express-ejs-layouts');
 const port = 8000;
 // Using Express functionality
 const app = express();
+//Calling the database connection
+const db = require('./config/mongoose');
 
 app.use(expressLayout);
 //Extract style and scripts from sub pages into the layout
