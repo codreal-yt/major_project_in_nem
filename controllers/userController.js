@@ -92,6 +92,7 @@ exports.createSession = async function(req, res){
 
 // Logout or Destroy Session
 exports.destroySession = function(req, res){
-    req.logout();
+  
+    res.cookie('user_id', null);
     return res.redirect('/');
 }
