@@ -11,10 +11,15 @@ const userSchema = new mongoose.Schema({
         type: String,
         unique: true
     },
-    passward: {
+    password: {
         type: String,
         required: true
     }
 }, {
-    timestamps: true
-})
+    timestamps: true,
+    versionKey: false
+});
+
+const Users = mongoose.model('Users', userSchema);
+
+module.exports = Users;
