@@ -4,12 +4,20 @@ const express = require('express');
 const path = require('path');
 //call the universal layout of this projects :)
 const expressLayout = require('express-ejs-layouts');
+// Loading Cookie Parser
+const cookieParser = require('cookie-parser');
 
 // Assigning Port
 const port = 8000;
 // Using Express functionality
 const app = express();
+//Calling the database connection
+const db = require('./config/mongoose');
 
+//Form data extracted
+app.use(express.urlencoded());
+// Cookie Parser
+app.use(cookieParser());
 app.use(expressLayout);
 //Extract style and scripts from sub pages into the layout
 app.set('layout extractStyles', true);
