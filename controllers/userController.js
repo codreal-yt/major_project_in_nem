@@ -1,5 +1,7 @@
 // users model
 const Users = require("../models/users");
+const bcrypt = require('bcrypt');
+const bcryptSalt = 10;
 
 // render the profile page
 exports.profile = async function (req, res) {
@@ -47,7 +49,7 @@ exports.signUp = function (req, res) {
 exports.create = async function (req, res) {
   try {
     // console.log(req.body);
-
+    
     let user = await Users.findOne({ email: req.body.email });
 
     if (req.body.password != req.body.confirm_password) {
@@ -55,7 +57,13 @@ exports.create = async function (req, res) {
     }
 
     if (!user) {
-      Users.create(req.body);
+      // Bcrypt Password 
+      const hashPassword = await bcrypt.hash(req.body.password, Number(bcryptSalt));
+      Users.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: hashPassword
+      });
       console.log(`New User Created Successfully`);
       return res.redirect("/users/sign-in");
     } else {
@@ -70,12 +78,6 @@ exports.create = async function (req, res) {
 // render the sign-in page
 exports.singIN = function (req, res) {
   //Check authenticated or not
-//   if (req.isAuthenticated()) {
-//     return res.redirect(
-//         '/'
-//     );
-  
-// }
 
 if (req.isAuthenticated()) {
   return res.redirect(
