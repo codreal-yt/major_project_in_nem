@@ -1,22 +1,36 @@
 // users model
 const Users = require("../models/users");
+const bcrypt = require('bcrypt');
+const bcryptSalt = 10;
 
 // render the profile page
 exports.profile = async function (req, res) {
 
     try {
-        if(req.cookies.user_id){
-            let userDetails = await Users.findById(req.cookies.user_id);
+        // if(req.cookies.user_id){
+        //     let userDetails = await Users.findById(req.cookies.user_id);
      
-            // console.log('User Details:',userDetails);
+        //     // console.log('User Details:',userDetails);
      
-            return res.render("userProfile", {
-             title: "User Profile",
-             details: userDetails
-           });
-         }else{
-             return res.redirect('/users/sign-in');
-         }
+        //     return res.render("userProfile", {
+        //      title: "User Profile",
+        //      details: userDetails
+        //    });
+        //  }else{
+        //      return res.redirect('/users/sign-in');
+        //  }
+        if(req.session.passport.user){
+              let userDetails = await Users.findById(req.session.passport.user);
+              // console.log('passport',req.session.passport.user);
+              // console.log('User Details:',userDetails);
+       
+              return res.render("userProfile", {
+               title: "User Profile",
+               details: userDetails
+             });
+           }else{
+               return res.redirect('/users/sign-in');
+           }
     } catch (error) {
         console.log(`Error to find details of user profile ${error}`);
         return res.redirect('/users/sign-in');
@@ -35,7 +49,7 @@ exports.signUp = function (req, res) {
 exports.create = async function (req, res) {
   try {
     // console.log(req.body);
-
+    
     let user = await Users.findOne({ email: req.body.email });
 
     if (req.body.password != req.body.confirm_password) {
@@ -43,7 +57,13 @@ exports.create = async function (req, res) {
     }
 
     if (!user) {
-      Users.create(req.body);
+      // Bcrypt Password 
+      const hashPassword = await bcrypt.hash(req.body.password, Number(bcryptSalt));
+      Users.create({
+        name: req.body.name,
+        email: req.body.email,
+        password: hashPassword
+      });
       console.log(`New User Created Successfully`);
       return res.redirect("/users/sign-in");
     } else {
@@ -57,41 +77,58 @@ exports.create = async function (req, res) {
 
 // render the sign-in page
 exports.singIN = function (req, res) {
+  //Check authenticated or not
+
+if (req.isAuthenticated()) {
+  return res.redirect(
+      '/users/profile'
+  );
+}
+
   return res.render("signIn", {
     title: "User Sign-IN",
   });
 };
 
-// sign-in and create a session for the user
-exports.createSession = async function(req, res){
-    try {
-        // Steps to authenticate
-        // Find the user
-        let user = await Users.findOne({email: req.body.email});
+// sign-in and create a session for the user in manual authentication
+// exports.createSession = async function(req, res){
+//     try {
+//         // Steps to authenticate
+//         // Find the user
+//         let user = await Users.findOne({email: req.body.email});
 
-        if(user){
-            // match password
-            if(user.password != req.body.password){
-                console.log('Email/Password Missmatched', req.body.password);
-                return res.redirect('back');
-            }
+//         if(user){
+//             // match password
+//             if(user.password != req.body.password){
+//                 console.log('Email/Password Missmatched', req.body.password);
+//                 return res.redirect('back');
+//             }
 
-            // create session
-            res.cookie('user_id', user.id);
-            return res.redirect('/users/profile');
-        }else{
-            console.log('No Input User Found');
-            return res.redirect('back');
-        }
-    } catch (error) {
-        console.log(`Error to find the user details ${error}`);
-        return res.redirect('back');
-    }
+//             // create session
+//             res.cookie('user_id', user.id);
+//             return res.redirect('/users/profile');
+//         }else{
+//             console.log('No Input User Found');
+//             return res.redirect('back');
+//         }
+//     } catch (error) {
+//         console.log(`Error to find the user details ${error}`);
+//         return res.redirect('back');
+//     }
+// }
+
+// Passport Authentication
+exports.createSession = function(req, res){
+  return res.redirect('/');
 }
-
 
 // Logout or Destroy Session
 exports.destroySession = function(req, res){
-    req.logout();
-    return res.redirect('/');
+  
+    // res.cookie('user_id', '');
+   
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      return res.redirect('/users/sign-in');
+    });
 }

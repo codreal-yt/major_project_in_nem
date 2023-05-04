@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Major project in Node Express MongoDB",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "nodemon index.js",
+    "start:build-dev": "node ./dist/main.js",
+    "build-dev": "webpack --config webpack.config.js --mode development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,10 +26,19 @@
   },
   "homepage": "https://github.com/codreal-yt/major_project_in_nem#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^5.0.0",
     "cookie-parser": "^1.4.6",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
-    "mongoose": "^7.0.3"
+    "express-session": "^1.17.3",
+    "mongoose": "^7.0.3",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.81.0",
+    "webpack-cli": "^5.0.2"
   }
 }
