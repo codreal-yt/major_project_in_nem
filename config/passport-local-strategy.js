@@ -40,6 +40,9 @@ passport.use(
               return done(null, false);
             }
           });
+        }else{
+            console.log("Invalid Username/Password");
+            return done(null, false);
         }
 
         // if (!user || user.password != password) {
