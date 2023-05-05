@@ -10,8 +10,11 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 - Step 4: Run the application using command : npm start 
 - Step 5: Open any web browser type : localhost:8000
 
+<<<<<<< HEAD
 ======================================
 
+=======
+>>>>>>> eb12bdc6af57a47a1a2d2f708aa1512fe554c89d
 # Passport JWT Authentication
 
 Here we uses two library and implemented in api
@@ -23,7 +26,10 @@ API URLs
 - 1. http://localhost:8000/users/api
 - 2. http://localhost:8000/users/createSession
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb12bdc6af57a47a1a2d2f708aa1512fe554c89d
 (If getting any error, Ping me in Youtube channel comment box)
 
 ======================================
