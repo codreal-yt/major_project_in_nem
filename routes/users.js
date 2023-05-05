@@ -5,7 +5,7 @@ const router = express.Router();
 // Passport
 const passport = require('passport');
 
-//importing sign-up controller
+//importing sign-up/sign-in controller
 const usersController = require('../controllers/userController');
 
 router.get('/profile', usersController.profile);
@@ -19,6 +19,12 @@ router.post('/create-session',
     })
 ,usersController.createSession);
 router.get('/sign-out', usersController.destroySession);
+
+// importing userapi controller
+const userApi = require('../controllers/api/v1/user_api');
+
+router.post('/createSession', userApi.createSession);
+router.get('/api', userApi.welcome);
 
 // Export router
 module.exports = router;
