@@ -18,7 +18,13 @@ router.post('/create-session',
         failureRedirect: '/users/sign-in'
     })
 ,usersController.createSession);
+
+// Logout User
 router.get('/sign-out', usersController.destroySession);
+
+//authenticate with google auth
+router.get('/auth/google', passport.authenticate('google', {scope: ['profile', 'email']}));
+router.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/users/sign-in'}), usersController.createSession);
 
 // importing userapi controller
 const userApi = require('../controllers/api/v1/user_api');
