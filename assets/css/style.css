@@ -1314,3 +1314,51 @@ section .container {
     background-position: 0 0;
   }
 }
+
+/* Mobile OTP Verification Template CSS */
+.new-login-area{
+  padding:24px;
+  margin-top: 90px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+label {
+  font-size: 12px;
+}
+.request-otp-header {
+  margin: 40px 0px;
+}
+.login-label label {
+  color: #c74032;
+  font-weight: 600;
+}
+.input-edit {
+  border: none !important;
+  border-bottom: 2px solid #ccc !important;
+  padding: 6px 0px;
+  opacity: 0.8;
+}
+.input-edit:focus {
+  border-bottom-color: #c74032 !important;
+  box-shadow: none;
+  outline: 0;
+}
+
+.request-otp {
+  margin-top: 40px;
+  background: linear-gradient(#c74032, #91041b);
+  font-size: 14px;
+  color: #fff;
+}
+.request-otp:focus {
+  box-shadow: none;
+}
+.fa-chevron-left {
+  cursor: pointer;
+}
+.resend-otp{
+  margin-top:6px;
+  cursor:pointer;
+}

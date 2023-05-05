@@ -50,6 +50,10 @@ save it.
 - Step 11: Click on the create button to create credentials.
 - Step 12: You will be getting your client ID and client secret.
 
+# SMS OTP with msg91 
+
+In this module we use sendotp, It's easy to implement.
+
 
 (If getting any error, Ping me in Youtube channel comment box)
 
