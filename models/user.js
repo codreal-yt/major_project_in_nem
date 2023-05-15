@@ -18,12 +18,16 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
-    }
+    },
+    confirm_password:{
+        type: String,
+        required: true
+    },
 }, {
     timestamps: true,
     versionKey: false
 });
 
-const User = mongoose.model('Users', userSchema);
+const Users = mongoose.model('Users', userSchema);
 
-module.exports = User;
+module.exports = Users;

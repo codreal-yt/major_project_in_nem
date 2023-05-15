@@ -14,7 +14,11 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 
 # Social Site
 
-
+Here we uses 
+- 1. Mongoose
+- 2. Passport
+- 3. Passport Local
+- 4. Multer
 
 (If getting any error, Ping me in Youtube channel comment box)
 
