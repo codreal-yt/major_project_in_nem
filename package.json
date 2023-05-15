@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/codreal-yt/major_project_in_nem#readme",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^37.1.0",
     "bcrypt": "^5.1.0",
     "connect-mongo": "^5.0.0",
     "cookie-parser": "^1.4.6",

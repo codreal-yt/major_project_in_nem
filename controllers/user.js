@@ -80,3 +80,8 @@ exports.createSession = function(req, res){
         return res.redirect('/user/sign-in');
       });
   }
+
+  // Feed Controller
+  exports.feedPost = function(req, res){
+    console.log(req.body);
+  }

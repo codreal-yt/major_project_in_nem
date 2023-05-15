@@ -11,6 +11,7 @@
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 </style>
+
 </head>
 <body class="w3-theme-l5">
 
@@ -132,9 +133,13 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
               <h6 class="w3-opacity">Codreal Social Site</h6>
+              <form action="/feed/feed_data" method="post">
               <!-- <p contenteditable="true" class="w3-border w3-padding">Status: Feeling Blue</p> -->
-              <div id="editor"></div>
-              <button type="button" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+              <!-- <div id="editor"></div> -->
+              <!-- <input type="text" id="editor"> -->
+              <textarea id="editor" name="editor"></textarea>
+              <button class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
+            </form>
             </div>
           </div>
         </div>
@@ -278,7 +283,28 @@ function openNav() {
 </script>
 
 <!-- CKEditor CDN -->
-<script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script> -->
+
+
+<!-- CKEditor Implimation-->
+
+<!-- <script>
+  ClassicEditor
+      .create( document.querySelector( '#editor' ) )
+      .then( editor => {
+		console.log( 'Editor was initialized', editor );
+	} )
+      .catch( error => {
+          console.error( error );
+      } );
+</script> -->
+
+<script src="/ckeditor/ckeditor.js"></script>
+
+<script type="text/javascript">
+CKEDITOR.replace('editor');
+</script> 
+
 
 </body>
 </html> 

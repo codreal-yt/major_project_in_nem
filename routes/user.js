@@ -21,6 +21,8 @@ router.post('/create-session',
 
 // Logout User
 router.get('/sign-out', userController.destroySession);
+// User Feed Post
+router.post('/feed', userController.feedPost);
 
 // Export Router
 module.exports = router;
