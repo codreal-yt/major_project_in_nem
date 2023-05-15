@@ -1,0 +1,32 @@
+{
+  "name": "social_site",
+  "version": "1.0.0",
+  "description": "Social Site Clone",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codreal-yt/major_project_in_nem.git"
+  },
+  "keywords": [
+    "social",
+    "site",
+    "facebook",
+    "clone"
+  ],
+  "author": "atul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codreal-yt/major_project_in_nem/issues"
+  },
+  "homepage": "https://github.com/codreal-yt/major_project_in_nem#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head><title><%= locals.title %></title></head>
+    <!-- Custom CSS File -->
+    <link href="/css/custom.css" rel="stylesheet">
+    <body>
+        <section>
+            <form>
+                <h1 class="colred">Login</h1>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+                <!-- <div class="forget">
+                    <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
+                </div> -->
+                <button>Log in</button>
+                <div class="register">
+                    <p style="color: green;">Don't have an account <a href="/user/sign-up">Register</a></p>
+                </div>
+            </form>
+        </section>
+    </body>
+</html>

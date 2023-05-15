@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= locals.title %>
+    </title>
+</head>
+<!-- Custom CSS File -->
+<link href="/css/custom.css" rel="stylesheet">
+
+<body>
+    <section class="mrt">
+        <form>
+            <h1 class="colred">Register</h1>
+            <div>
+                <div class="inputbox">
+                    <ion-icon name="fullname"></ion-icon>
+                    <input type="text" id="fullname" name="fullname" autocomplete="name" required>
+                    <label for="fullname">Full Name</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="email"></ion-icon>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="tel" id="mob" name="mob" autocomplete="tel" pattern="[0-9]{2}[0-9]{4}[0-9]{4}"
+                        required>
+                    <label for="mob">Mob No.</label>
+                </div>
+            </div>
+            <div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" name="password" autocomplete="new-password" required>
+                    <label for="password">Password</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="confirmpassword" name="confirmpassword" autocomplete="new-password"
+                        required>
+                    <label for="confirmpassword">Confirm Password</label>
+                </div>
+            </div>
+
+            <!-- <div class="forget">
+                    <label for=""><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>
+                </div> -->
+            <button>Sign Up</button>
+            <div class="register">
+                <p style="color: green;">If you have an account <a href="/user/sign-in">Sign In</a></p>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
