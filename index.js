@@ -8,6 +8,8 @@ const path = require('path');
 const port = 8001
 // Using Express functionality
 const app = express()
+//Calling the database connection
+const db = require('./config/mongoose');
 
 // Set view with ejs
 app.set('view engine', 'ejs');
