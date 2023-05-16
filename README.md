@@ -25,7 +25,7 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 
 - 5. CKEditor 4
 
-### Finally We Covered All Most of Concepts In NodeJS in Single Project
+### Finally We Covered Most Of The Concepts In NodeJS In Single Project
 
 (If getting any error, Ping me in Youtube channel comment box)
 
