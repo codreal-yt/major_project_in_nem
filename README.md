@@ -14,11 +14,18 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 
 # Social Site
 
-Here we uses 
+## In this project we have uses multiple library
 - 1. Mongoose
+
 - 2. Passport
+
 - 3. Passport Local
+
 - 4. Multer
+
+- 5. CKEditor 4
+
+### Finally We Covered All Most of Concepts In NodeJS in Single Project
 
 (If getting any error, Ping me in Youtube channel comment box)
 

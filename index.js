@@ -30,6 +30,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 // Use Middleware to load static files
 app.use(express.static('./assets'));
+//Calling the path of uploads
+app.use('/uploads', express.static(__dirname + '/uploads'));
 
 // App Session
 app.use(

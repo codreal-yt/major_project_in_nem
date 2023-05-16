@@ -34,7 +34,7 @@ exports.create_user = async function (req, res) {
       console.log("Password Not Matched!!");
       return res.redirect("back");
     }
-
+    // console.log(req.file.filename);
     if (!user) {
       // Bcrypt Password
       const hashPassword = await bcrypt.hash(
@@ -47,6 +47,7 @@ exports.create_user = async function (req, res) {
         mob: req.body.mob,
         password: hashPassword,
         confirm_password: hashPassword,
+        avatar: req.file.filename
       });
       console.log(`New User Created Successfully`);
       return res.redirect("/user/sign-in");

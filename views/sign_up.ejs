@@ -11,7 +11,7 @@
 
 <body>
     <section class="mrt">
-        <form action="/user/new_user_data" method="post">
+        <form action="/user/new_user_data" method="post" enctype="multipart/form-data">
             <h1 class="colred">Register</h1>
             <div>
                 <div class="inputbox">
@@ -31,6 +31,13 @@
                     <input type="tel" id="mob" name="mob" autocomplete="tel" pattern="[0-9]{2}[0-9]{4}[0-9]{4}"
                         required>
                     <label for="mob">Mob No.</label>
+                </div>
+            </div>
+            <div>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="file" id="avatar" name="avatar">
+                    <label for="avatar"><icon class="fa fa-user">Profile</icon></label>
                 </div>
             </div>
             <div>

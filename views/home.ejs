@@ -23,7 +23,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   <a href="/user/sign-out" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Sign-Out"><i class="fa fa-user"></i> Sign-out</a>
   
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="/w3images/avatar2.png" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
+    <img src="/uploads/profile/avatar/<%= profile.avatar %>" class="w3-circle" style="height:23px;width:23px" alt="Avatar">
   </a>
  </div>
 </div>
@@ -44,7 +44,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       <div class="w3-card w3-round w3-white">
         <div class="w3-container">
          <h4 class="w3-center">My Profile</h4>
-         <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <p class="w3-center"><img src="/uploads/profile/avatar/<%= profile.avatar %>" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <p><i class="fa fa-user fa-fw w3-margin-right w3-text-theme"></i> <%= profile.fullname %></p>
          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-text-theme"></i><%= profile.email %></p>
@@ -151,7 +151,7 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
         <% for(feed of feeds) { %>
-          <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+          <img src="/uploads/profile/avatar/<%= feed.user.avatar %>" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
           <span class="w3-right w3-opacity">1 min</span>
           <h4>
             <%= feed.user.fullname %>

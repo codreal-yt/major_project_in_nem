@@ -1,6 +1,7 @@
 // Importing mongoose library
 const mongoose = require('mongoose');
 
+
 // User Schema 
 const userSchema = new mongoose.Schema({
     fullname: {
@@ -14,6 +15,9 @@ const userSchema = new mongoose.Schema({
     mob: {
         type: Number,
         require: true
+    },
+    avatar: {
+        type: String
     },
     password: {
         type: String,
