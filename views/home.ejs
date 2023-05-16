@@ -158,8 +158,8 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
           </h4><br>
           <hr class="w3-clear">
           <%- feed.content %>
-            <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>
-               Like</button>
+            <button class="w3-button w3-theme-d1 w3-margin-bottom" onclick="window.location.href='/feed/toggleLike/?id=<%=feed._id%>&type=Feed'"><i class="fa fa-thumbs-up"> Like</i> <span class="w3-badge w3-red"><%= feed.likes.length %></span>
+              </button>
             <!-- <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i>  Comment</button>  -->
             <div class="w3-row-padding" style="margin-bottom: 50px;">
               <div class="w3-col m12">

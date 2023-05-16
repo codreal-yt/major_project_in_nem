@@ -15,7 +15,14 @@ const commentSchema = new mongoose.Schema({
     post: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Feed'
-    }
+    },
+     // Including the arrays of likes
+     likes: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:'Like'
+        }
+    ]
 }, {
     timestamps: true,
     versionKey: false
