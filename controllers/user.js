@@ -5,12 +5,9 @@ const bcryptSalt = 10;
 
 // Sign IN Page Render
 exports.sign_in_page_render = function (req, res) {
-
-    if (req.isAuthenticated()) {
-        return res.redirect(
-            '/'
-        );
-      }
+  if (req.isAuthenticated()) {
+    return res.redirect("/");
+  }
 
   return res.render("sign_in", {
     title: "USER SIGN IN",
@@ -19,12 +16,9 @@ exports.sign_in_page_render = function (req, res) {
 
 // Sign Up Page Render
 exports.sign_up_page_render = function (req, res) {
-
-    if (req.isAuthenticated()) {
-        return res.redirect(
-            '/'
-        );
-      }
+  if (req.isAuthenticated()) {
+    return res.redirect("/");
+  }
 
   return res.render("sign_up", {
     title: "USER SIGN UP",
@@ -66,22 +60,18 @@ exports.create_user = async function (req, res) {
 };
 
 // Passport Authentication
-exports.createSession = function(req, res){
-    return res.redirect('/');
-  }
-  
-// Logout or Destroy Session
-  exports.destroySession = function(req, res){
-    
-      // res.cookie('user_id', '');
-     
-      req.logout(function(err) {
-        if (err) { return next(err); }
-        return res.redirect('/user/sign-in');
-      });
-  }
+exports.createSession = function (req, res) {
+  return res.redirect("/");
+};
 
-  // Feed Controller
-  exports.feedPost = function(req, res){
-    console.log(req.body);
-  }
+// Logout or Destroy Session
+exports.destroySession = function (req, res) {
+  // res.cookie('user_id', '');
+
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    return res.redirect("/user/sign-in");
+  });
+};

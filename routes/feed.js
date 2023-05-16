@@ -1,5 +1,7 @@
 // Express Library
 const express = require('express');
+// Passport
+const passport = require('passport');
 // Router
 const router = express.Router();
 
@@ -7,6 +9,7 @@ const router = express.Router();
 const feedController = require('../controllers/feed');
 
 router.post('/feed_data', feedController.feedPost);
+router.post('/create', passport.checkAuthentication, feedController.cooment_create);
 
 // Export Router
 module.exports = router;
