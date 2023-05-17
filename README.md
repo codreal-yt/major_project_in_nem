@@ -50,6 +50,7 @@ save it.
 - Step 11: Click on the create button to create credentials.
 - Step 12: You will be getting your client ID and client secret.
 
+Video Link: https://youtu.be/YLgitmvTQbA
 
 (If getting any error, Ping me in Youtube channel comment box)
 
