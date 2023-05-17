@@ -10,6 +10,9 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 - Step 4: Run the application using command : npm start 
 - Step 5: Open any web browser type : localhost:8000
 
+
+Video Link: https://youtu.be/IxQb-jo5Ky8
+
 ======================================
 
 # Passport JWT Authentication
@@ -50,7 +53,13 @@ save it.
 - Step 11: Click on the create button to create credentials.
 - Step 12: You will be getting your client ID and client secret.
 
+
 Video Link: https://youtu.be/YLgitmvTQbA
+
+# SMS OTP with msg91 
+
+In this module we use sendotp, It's easy to implement.
+
 
 (If getting any error, Ping me in Youtube channel comment box)
 
@@ -58,6 +67,7 @@ Video Link: https://youtu.be/YLgitmvTQbA
 
 Like, share and subscribe to my channel for more updates.
 https://www.youtube.com/@codreal
+
 
 For Support:
 Paytm: https://paytm.me/SV-tdQC
