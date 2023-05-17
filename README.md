@@ -10,6 +10,9 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 - Step 4: Run the application using command : npm start 
 - Step 5: Open any web browser type : localhost:8000
 
+
+Video Link: https://youtu.be/IxQb-jo5Ky8
+
 ======================================
 
 # Passport JWT Authentication
@@ -61,6 +64,7 @@ In this module we use sendotp, It's easy to implement.
 
 Like, share and subscribe to my channel for more updates.
 https://www.youtube.com/@codreal
+
 
 For Support:
 Paytm: https://paytm.me/SV-tdQC
