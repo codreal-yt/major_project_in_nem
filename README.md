@@ -10,6 +10,8 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 - Step 4: Run the application using command : npm start 
 - Step 5: Open any web browser type : localhost:8000
 
+Video Link: https://youtu.be/IxQb-jo5Ky8
+
 (If getting any error, Ping me in Youtube channel comment box)
 
 ======================================
