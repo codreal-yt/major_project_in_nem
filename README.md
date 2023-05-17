@@ -30,6 +30,9 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 #### Video Link Of Multer Configuration 
 https://youtu.be/3e_AcFwqGd0
 
+#### Video Link Of Social App
+https://youtu.be/Sbb8Tju3i8w
+
 (If getting any error, Ping me in Youtube channel comment box)
 
 ======================================
