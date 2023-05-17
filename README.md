@@ -27,7 +27,7 @@ NodeJS, Express, Express-EJS-Layout, Mongoose
 
 ### Finally We Covered Most Of The Concepts In NodeJS In Single Project
 
-#### Video Link For Multer 
+#### Video Link Of Multer Configuration 
 https://youtu.be/3e_AcFwqGd0
 
 (If getting any error, Ping me in Youtube channel comment box)
