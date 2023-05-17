@@ -17,11 +17,17 @@ const app = express();
 const db = require('./config/mongoose');
 // Used for Session Cookie
 const session = require('express-session');
+// Passport Library
 const passport = require('passport');
+// Passport Local Strategy
 const passportLocal = require('./config/passport-local-strategy');
+// Passport JWT Strategy
+const passportJWT = require('./config/passport-jwt-strategy');
+// Passport Google Auth
+const googleAuthPassport = require('./config/passport-google-oauth-2-strategy');
 
 //Form data extracted
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false}));
 // Cookie Parser
 app.use(cookieParser());
 app.use(expressLayout);
